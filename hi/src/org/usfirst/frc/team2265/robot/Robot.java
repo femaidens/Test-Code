@@ -30,7 +30,6 @@ public class Robot extends IterativeRobot {
 	public static Piston piston;
 	public static MecanumDrive drive;
 	
-    CommandGroup auton1;
     SendableChooser autonChooser;
     Compressor compressy; 
     CommandGroup autonomous; 
@@ -57,7 +56,8 @@ public class Robot extends IterativeRobot {
     	autonChooser.addDefault("AutonForFun", new AutonForFun());
     	autonChooser.addObject("Extend and Retract Piston", new SecondAuton());
     	SmartDashboard.putData("Autonomous choices", autonChooser);
-    	}
+    }
+    
 	public void disabledPeriodic() {
 		Scheduler.getInstance().run();
 	}
@@ -83,7 +83,7 @@ public class Robot extends IterativeRobot {
         // teleop starts running. If you want the autonomous to 
         // continue until interrupted by another command, remove
         // this line or comment it out. 
-        if (auton1 != null) auton1.cancel();
+        if (autonomous != null) autonomous.cancel();
         
     }
 

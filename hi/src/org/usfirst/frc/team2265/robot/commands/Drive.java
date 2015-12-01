@@ -14,9 +14,10 @@ public class Drive extends Command {
 	public double y;
 	public double z;
 	public double time;
-	public int degrees;
-	public Timer timer;
-	public double[] encValues;
+	//public int degrees;
+	public double startTime;
+	//public Timer timer;
+	//public double[] encValues;
 	
     public Drive(double xDirection, double yDirection, double zDirection, double secs) {
         // Use requires() here to declare subsystem dependencies
@@ -26,10 +27,11 @@ public class Drive extends Command {
     	y = yDirection;
     	z = zDirection;
     	time = secs;
-    	degrees = 0;
+    	//degrees = 0;
     	
-    	timer = new Timer();
-    	encValues = Robot.drive.getEncoderValues();	
+    	//timer = new Timer();
+    	//encValues = Robot.drive.getEncoderValues();	
+    	System.out.println("Hello, it's me.");
     }
     
     public Drive(double xDirection, double yDirection, double zDirection, int angle) {
@@ -39,26 +41,29 @@ public class Drive extends Command {
     	x = xDirection;
     	y = yDirection;
     	z = zDirection;
-    	degrees = angle;
+    	//degrees = angle;
     	time = 0;
     	
-    	timer = new Timer();
-    	encValues = Robot.drive.getEncoderValues();	
+    	//timer = new Timer();
+    	//encValues = Robot.drive.getEncoderValues();	
     }
 
     // Called just before this Command runs the first time
     protected void initialize() {
-    	timer.start();
+    	startTime = Timer.getFPGATimestamp();
     }
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
     	Robot.drive.driveAuto(x, y, z);
+    	System.out.println("I've must've called a thousand times...");
     }
 
     // Make this return true when this Command no longer needs to run execute()
     protected boolean isFinished() {
-        return timer.get() == time && encValues[0] == degrees && encValues[1] == degrees && encValues[2] == degrees && encValues[4] == degrees;
+    	System.out.println("time: "+ Timer.getFPGATimestamp());
+    	return Timer.getFPGATimestamp() - startTime >= time;
+        //return Timer.getFPGATimestamp() - startTime >= time && encValues[0] == degrees && encValues[1] == degrees && encValues[2] == degrees && encValues[3] == degrees;
     }
 
     // Called once after isFinished returns true

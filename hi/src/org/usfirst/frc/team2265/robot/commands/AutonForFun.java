@@ -24,10 +24,9 @@ public class AutonForFun extends CommandGroup {
         // e.g. if Command1 requires chassis, and Command2 requires arm,
         // a CommandGroup containing them would require both the chassis and the
         // arm.
-    	addSequential(new Drive(0, -0.25, 0, 10.0)); //forward
-    	addSequential(new Drive(0, 0.7, 0, 10.0)); //backward
-    	addSequential
-    	(new Drive(0.3, 0, 0, 10.0)); //strafe
+    	addSequential(new Drive(0, -0.25, 0, 2.0)); //forward
+    	addSequential(new Drive(0, 0.25, 0, 2.0)); //backward
+    	addSequential(new Drive(0.25, 0, 0, 2.0)); //strafe
     	//addSequential(new Extend()); //extend piston
     	//addSequential(new Retract()); //retract piston
     }
