@@ -25,7 +25,7 @@ public class Retract extends Command {
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
     	//retracts the piston if it is extended
-    	if (Robot.piston.get().equals(Value.kForward_val)) {
+    	if (Robot.piston.get().equals(Value.kForward)) {
     		Robot.piston.retract();
     	}
     }
@@ -33,7 +33,7 @@ public class Retract extends Command {
     // Make this return true when this Command no longer needs to run execute()
     protected boolean isFinished() {
     	//if the piston is retracted, return true, else return false to show if the action has finished
-    	if (Robot.piston.get().equals(Value.kReverse_val)) { 
+    	if (Robot.piston.get().equals(Value.kReverse)) { 
     		return true;
     	}
     	else {

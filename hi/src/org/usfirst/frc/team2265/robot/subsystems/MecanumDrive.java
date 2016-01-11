@@ -3,7 +3,7 @@ package org.usfirst.frc.team2265.robot.subsystems;
 import org.usfirst.frc.team2265.robot.RobotMap;
 
 import edu.wpi.first.wpilibj.CANTalon;
-import edu.wpi.first.wpilibj.Gyro;
+import edu.wpi.first.wpilibj.AnalogGyro;
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.RobotDrive;
 import edu.wpi.first.wpilibj.command.Subsystem;
@@ -23,7 +23,7 @@ public class MecanumDrive extends Subsystem {
 	public static CANTalon rearRight = new CANTalon(RobotMap.rearRightPort);
 	public static RobotDrive mecanumDrive = new RobotDrive(frontLeft, rearLeft, frontRight, rearRight);
 	
-	public static Gyro gyroscope = new Gyro(RobotMap.gyroPort);
+	public static AnalogGyro gyroscope = new AnalogGyro(RobotMap.gyroPort);
 	public static Joystick leftJoy =  new Joystick(RobotMap.leftJoyPort);
 	public static Joystick rightJoy = new Joystick(RobotMap.rightJoyPort);
 	

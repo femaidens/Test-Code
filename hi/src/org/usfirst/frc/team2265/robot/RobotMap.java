@@ -16,6 +16,11 @@ public class RobotMap {
     // public static int rangefinderPort = 1;
     // public static int rangefinderModule = 1;
 	
+	//Talon ports
+	public static int shooterFLPort = 0;
+	public static int shooterFRPort = 1;
+	
+	
 	//Joystick Ports
 	public static int leftJoyPort = 0;
 	public static int rightJoyPort = 1;
