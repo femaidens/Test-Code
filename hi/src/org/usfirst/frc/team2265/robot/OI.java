@@ -40,14 +40,17 @@ public class OI {
     // button.whenReleased(new ExampleCommand());
 	 
 	public static Joystick atkJoy = new Joystick(RobotMap.atkJoyPort);
-	public static Button pistonOut = new JoystickButton(atkJoy, 2);
+	/*public static Button pistonOut = new JoystickButton(atkJoy, 2);
 	public static Button pistonIn = new JoystickButton(atkJoy, 3);
-	public static Button gyroReset= new JoystickButton(atkJoy, 6); 
+	public static Button gyroReset= new JoystickButton(atkJoy, 6);*/
+	
+	public static Button shoot = new JoystickButton(atkJoy, 2);
 	
 	public void bindButtons() {
-		pistonOut.whenReleased(new Extend());
+		/*pistonOut.whenReleased(new Extend());
 		pistonIn.whenReleased(new Retract());
-		gyroReset.whenReleased(new GyroReset()); 
+		gyroReset.whenReleased(new GyroReset()); */
+		shoot.whileHeld(new Shoot());
 		
 	}
 	
