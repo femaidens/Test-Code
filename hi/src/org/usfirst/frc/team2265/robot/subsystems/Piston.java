@@ -16,7 +16,7 @@ public class Piston extends Subsystem {
     // here. Call these from Commands.
 	
 	DoubleSolenoid actuator = new DoubleSolenoid(RobotMap.sol1Port, RobotMap.sol2Port);
-	Compressor compressor = new Compressor();
+	
 
 	//method to extend the piston
 	public void extend() {

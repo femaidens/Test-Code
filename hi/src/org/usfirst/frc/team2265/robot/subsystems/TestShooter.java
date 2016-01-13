@@ -34,6 +34,11 @@ public class TestShooter extends Subsystem {
 		shooterFR.set(-speed);
 	}
 	
+	public void stop() {
+		shooterFL.set(0);
+		shooterFR.set(0);
+	}
+	
     public void initDefaultCommand() {
         // Set the default command for a subsystem here.
         //setDefaultCommand(new MySpecialCommand());

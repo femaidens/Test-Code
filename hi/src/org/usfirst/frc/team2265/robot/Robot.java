@@ -10,7 +10,6 @@ import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.Compressor; 
 
 import org.usfirst.frc.team2265.robot.commands.AutonForFun;
-import org.usfirst.frc.team2265.robot.subsystems.ExampleSubsystem;
 import org.usfirst.frc.team2265.robot.subsystems.MecanumDrive;
 import org.usfirst.frc.team2265.robot.subsystems.Piston;
 import org.usfirst.frc.team2265.robot.OI;
@@ -26,7 +25,7 @@ import org.usfirst.frc.team2265.robot.commands.*;
  */
 public class Robot extends IterativeRobot {
 
-	public static final ExampleSubsystem exampleSubsystem = new ExampleSubsystem();
+	
 	public static OI oi;
 	public static TestShooter cannon;
 	public static Piston piston;

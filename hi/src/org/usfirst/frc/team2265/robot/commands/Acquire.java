@@ -1,18 +1,17 @@
-
 package org.usfirst.frc.team2265.robot.commands;
 
-import edu.wpi.first.wpilibj.command.Command;
-
 import org.usfirst.frc.team2265.robot.Robot;
+
+import edu.wpi.first.wpilibj.command.Command;
 
 /**
  *
  */
-public class ExampleCommand extends Command {
+public class Acquire extends Command {
 
-    public ExampleCommand() {
+    public Acquire() {
         // Use requires() here to declare subsystem dependencies
-        requires(Robot.exampleSubsystem);
+        // eg. requires(chassis);
     }
 
     // Called just before this Command runs the first time
@@ -21,6 +20,7 @@ public class ExampleCommand extends Command {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
+    	Robot.cannon.acquire();
     }
 
     // Make this return true when this Command no longer needs to run execute()
@@ -30,6 +30,7 @@ public class ExampleCommand extends Command {
 
     // Called once after isFinished returns true
     protected void end() {
+    	Robot.cannon.stop();
     }
 
     // Called when another command which requires one or more of the same

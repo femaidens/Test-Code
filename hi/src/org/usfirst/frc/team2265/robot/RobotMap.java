@@ -18,7 +18,7 @@ public class RobotMap {
 	
 	//Talon ports
 	public static int shooterFLPort = 0;
-	public static int shooterFRPort = 1;
+	public static int shooterFRPort = 14;
 	
 	
 	//Joystick Ports
@@ -27,10 +27,10 @@ public class RobotMap {
 	public static int atkJoyPort = 2;
 	
 	//CAN Talon IDs
-	public static int rearLeftPort = 0;
-	public static int rearRightPort = 1;
-	public static int frontLeftPort = 2;
-	public static int frontRightPort = 3;
+	public static int rearLeftPort = 2;
+	public static int rearRightPort = 12;
+	public static int frontLeftPort = 1;
+	public static int frontRightPort = 13;
 	
 	//Sensors
 	public static int gyroPort = 0; //analog
