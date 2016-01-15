@@ -25,7 +25,7 @@ public class Retract extends Command {
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
     	//retracts the piston if it is extended
-    	if (Robot.piston.get().equals(Value.kForward)) {
+    	if (Robot.piston.get().equals(Value.kForward) || Robot.piston.get().equals(Value.kOff)) {
     		Robot.piston.retract();
     	}
     }

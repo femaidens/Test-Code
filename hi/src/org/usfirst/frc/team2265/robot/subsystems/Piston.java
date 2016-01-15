@@ -17,7 +17,7 @@ public class Piston extends Subsystem {
 	
 	DoubleSolenoid actuator = new DoubleSolenoid(RobotMap.sol1Port, RobotMap.sol2Port);
 	
-
+ 
 	//method to extend the piston
 	public void extend() {
 		actuator.set(DoubleSolenoid.Value.kForward);
@@ -36,6 +36,7 @@ public class Piston extends Subsystem {
     public void initDefaultCommand() {
         // Set the default command for a subsystem here.
         //setDefaultCommand(new MySpecialCommand());
+    	actuator.set(DoubleSolenoid.Value.kOff);
     }
 }
 

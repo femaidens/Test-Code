@@ -46,6 +46,8 @@ public class OI {
 	
 	public static Button shoot = new JoystickButton(atkJoy, 2);
 	public static Button acquire = new JoystickButton(atkJoy, 1);
+	public static Button curveLeft = new JoystickButton(atkJoy, 5); 
+	public static Button curveRight= new JoystickButton(atkJoy, 6); 
 	
 	public void bindButtons() {
 		pistonOut.whenReleased(new Extend());
@@ -54,6 +56,10 @@ public class OI {
 		shoot.whileHeld(new Shoot());
 		//change to whenPressed in final v. 
 		acquire.whileHeld(new Acquire());
+		curveLeft.whileHeld(new CurveBall(.7, 1));
+		curveRight.whileHeld(new CurveBall(1, .7));
+		
+		
 		
 	}
 	

@@ -29,6 +29,13 @@ public class TestShooter extends Subsystem {
 		shooterFR.set(speed);
 	}
 	
+	public void spinWheels(double leftVelocity, double rightVelocity){
+    	//positive velocity is to shoot
+    	//negative velocity is to acquire
+    	shooterFL.set(leftVelocity);
+    	shooterFR.set(-rightVelocity);
+	}
+	
 	public void acquire() {
 		shooterFL.set(speed);
 		shooterFR.set(-speed);

@@ -25,7 +25,7 @@ public class Extend extends Command {
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
     	//extends the piston if it is retracted
-    	if (Robot.piston.get().equals(Value.kReverse)) {
+    	if (Robot.piston.get().equals(Value.kReverse) || Robot.piston.get().equals(Value.kOff)) {
     		Robot.piston.extend();
     	}
     }
