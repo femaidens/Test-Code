@@ -32,7 +32,7 @@ public class Robot extends IterativeRobot {
 	public static MecanumDrive drive;
 	
     SendableChooser autonChooser;
-    Compressor compressy; 
+    //Compressor compressy; 
     CommandGroup autonomous; 
     /**
      * This function is run when the robot is first started up and should be
@@ -42,7 +42,7 @@ public class Robot extends IterativeRobot {
 		oi = new OI();
 		piston = new Piston();
 		drive = new MecanumDrive();
-		compressy = new Compressor();
+		//compressy = new Compressor();
 		cannon =  new TestShooter();
 		
 		
@@ -50,12 +50,12 @@ public class Robot extends IterativeRobot {
        // auton1 = new AutonForFun();
         oi.bindButtons();
         createAutonChooser();
-        compressy.start(); 
+        //compressy.start(); 
         
-        boolean enabled = compressy.enabled();
-        boolean pressureSwitch = compressy.getPressureSwitchValue();
-        float current = compressy.getCompressorCurrent();
-        SmartDashboard.putNumber("Compressor value = ", current);
+       // boolean enabled = compressy.enabled();
+        //boolean pressureSwitch = compressy.getPressureSwitchValue();
+        //float current = compressy.getCompressorCurrent();
+        //SmartDashboard.putNumber("Compressor value = ", current);
 
     }
 	

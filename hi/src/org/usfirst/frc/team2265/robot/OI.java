@@ -50,8 +50,8 @@ public class OI {
 	public static Button curveRight= new JoystickButton(atkJoy, 6); 
 	
 	public void bindButtons() {
-		pistonOut.whenReleased(new Extend());
-		pistonIn.whenReleased(new Retract());
+		//pistonOut.whenReleased(new Extend());
+		//pistonIn.whenReleased(new Retract());
 		gyroReset.whenReleased(new GyroReset()); 
 		shoot.whileHeld(new Shoot());
 		//change to whenPressed in final v. 

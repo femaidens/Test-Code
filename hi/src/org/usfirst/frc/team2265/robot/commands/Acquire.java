@@ -12,6 +12,7 @@ public class Acquire extends Command {
     public Acquire() {
         // Use requires() here to declare subsystem dependencies
         // eg. requires(chassis);
+    	requires (Robot.cannon);
     }
 
     // Called just before this Command runs the first time
